@@ -10,6 +10,9 @@
    Images live in assets/work/<project>/web/
    ============================================================ */
 
+/* where the image folders live, relative to the page */
+window.ASSET_BASE = 'assets/';
+
 window.WORK_GALLERIES = {
 
   /* ---------- Homes by Avi ---------- */
