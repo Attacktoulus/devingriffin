@@ -264,7 +264,7 @@
       track.innerHTML = items.map(it => {
         const cap = (it.cap || '').replace(/&/g, '&amp;').replace(/</g, '&lt;');
         return `<figure class="slide${it.long ? ' long' : ''}">` +
-          `<img src="../assets/work/${folder}/web/${it.src}" alt="${cap}" loading="lazy">` +
+          `<img src="${window.ASSET_BASE || 'assets/'}work/${folder}/web/${it.src}" alt="${cap}" loading="lazy">` +
           `<figcaption class="slide-cap">${cap}</figcaption></figure>`;
       }).join('');
       const count = track.closest('.carousel-wrap')?.querySelector('[data-count]');
