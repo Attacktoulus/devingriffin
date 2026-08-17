@@ -1,0 +1,296 @@
+/* ---- tokens/fonts.css ---- */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:opsz,wght@14..32,400;500;600;700;800&display=swap');
+
+
+/* ---- tokens/colors.css ---- */
+:root {
+  /* Absolutes */
+  --color-white: #ffffff;
+  --color-black: #0a0d0a;
+
+  /* Green — brand accent, from the Griffin mark */
+  --color-green-100: oklch(95% 0.035 152);
+  --color-green-200: oklch(89% 0.06 152);
+  --color-green-300: oklch(80% 0.1 152);
+  --color-green-400: oklch(69% 0.135 152);
+  --color-green-500: oklch(59% 0.15 152); /* base — #2f9b4e */
+  --color-green-600: oklch(51% 0.145 152);
+  --color-green-700: oklch(42% 0.125 152);
+  --color-green-800: oklch(32% 0.095 152);
+  --color-green-900: oklch(21% 0.06 152); /* deep forest — headline on cream */
+
+  /* Cream / tan — warm neutral, light mode ground */
+  --color-cream-50: oklch(99% 0.018 90);
+  --color-cream-100: oklch(96% 0.032 88);
+  --color-cream-200: oklch(92% 0.048 87); /* base light-mode bg — #fce9b1 */
+  --color-cream-300: oklch(87% 0.058 85);
+  --color-cream-400: oklch(78% 0.065 80);
+  --color-cream-500: oklch(68% 0.065 75); /* tan */
+  --color-cream-600: oklch(58% 0.058 70);
+  --color-cream-700: oklch(46% 0.048 65);
+  --color-cream-800: oklch(34% 0.032 60);
+  --color-cream-900: oklch(22% 0.018 55);
+
+  /* Coal / navy — cool neutral, dark mode ground */
+  --color-coal-100: oklch(92% 0.01 220);
+  --color-coal-200: oklch(80% 0.015 222);
+  --color-coal-300: oklch(65% 0.02 224);
+  --color-coal-400: oklch(50% 0.025 226);
+  --color-coal-500: oklch(38% 0.03 228);
+  --color-coal-600: oklch(28% 0.03 230);
+  --color-coal-700: oklch(20% 0.028 232); /* elevated dark surface */
+  --color-coal-800: oklch(14% 0.024 235);
+  --color-coal-900: oklch(9% 0.018 238); /* base dark-mode bg — #060d13 */
+
+  /* Semantic — dark mode (night sky) */
+  --surface-dark: var(--color-coal-900);
+  --surface-dark-elevated: var(--color-coal-700);
+  --text-dark-primary: var(--color-cream-100);
+  --text-dark-secondary: var(--color-coal-200);
+  --text-dark-muted: var(--color-coal-400);
+  --border-dark: color-mix(in oklch, var(--color-cream-100) 16%, transparent);
+
+  /* Semantic — light mode (sunny root) */
+  --surface-light: var(--color-cream-200);
+  --surface-light-elevated: var(--color-cream-100);
+  --text-light-heading: var(--color-green-900);
+  --text-light-primary: var(--color-black);
+  --text-light-secondary: var(--color-cream-700);
+  --text-light-muted: var(--color-cream-600);
+  --border-light: color-mix(in oklch, var(--color-cream-900) 18%, transparent);
+
+  /* Accent + interaction states */
+  --accent: var(--color-green-500);
+  --accent-hover: var(--color-green-600);
+  --accent-press: var(--color-green-700);
+  --accent-tint: color-mix(in oklch, var(--color-green-500) 14%, transparent);
+  --focus-ring: var(--color-green-400);
+}
+
+
+/* ---- tokens/typography.css ---- */
+:root {
+  --font-display: 'Anton', 'Archivo Black', sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+
+  --tracking-display: -0.01em;
+  --tracking-label: 0.08em;
+
+  --text-display-1: 700 clamp(3rem, 6vw, 6.5rem)/0.94 var(--font-display);
+  --text-display-2: 400 clamp(2.25rem, 4vw, 4rem)/0.98 var(--font-display);
+  --text-h1: 400 clamp(1.75rem, 2.4vw, 2.5rem)/1.05 var(--font-display);
+  --text-h2: 400 1.5rem/1.15 var(--font-display);
+  --text-body-lg: 400 1.125rem/1.5 var(--font-body);
+  --text-body: 400 1rem/1.6 var(--font-body);
+  --text-body-sm: 400 0.875rem/1.5 var(--font-body);
+  --text-label: 600 0.75rem/1.3 var(--font-body);
+  --text-micro: 500 0.6875rem/1.3 var(--font-body);
+}
+
+
+/* ---- tokens/spacing.css ---- */
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  --radius-none: 0px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-full: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(6, 13, 19, 0.35);
+  --shadow-md: 0 8px 24px rgba(6, 13, 19, 0.45);
+  --shadow-lg: 0 24px 64px rgba(6, 13, 19, 0.55);
+
+  --container-max: 1440px;
+  --grid-gutter: var(--space-5);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 600ms;
+}
+
+
+/* ---- components/components.css ---- */
+/* Reset + base */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: var(--text-body);
+  background: var(--surface-dark);
+  color: var(--text-dark-primary);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-hover); }
+::selection { background: var(--accent-tint); color: inherit; }
+:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+
+/* Theme scopes — apply to a page-level container */
+.theme-dark {
+  background: var(--surface-dark);
+  color: var(--text-dark-primary);
+}
+.theme-light {
+  background: var(--surface-light);
+  color: var(--text-light-primary);
+}
+
+/* Display type */
+.text-display-1 { font: var(--text-display-1); letter-spacing: var(--tracking-display); text-transform: uppercase; margin: 0; }
+.text-display-2 { font: var(--text-display-2); letter-spacing: var(--tracking-display); text-transform: uppercase; margin: 0; }
+.text-h1 { font: var(--text-h1); text-transform: uppercase; margin: 0; }
+.text-h2 { font: var(--text-h2); text-transform: uppercase; margin: 0; }
+.text-label { font: var(--text-label); letter-spacing: var(--tracking-label); text-transform: uppercase; }
+.text-micro { font: var(--text-micro); letter-spacing: var(--tracking-label); text-transform: uppercase; }
+.theme-dark .text-display-1, .theme-dark .text-display-2 { color: var(--text-dark-primary); }
+.theme-light .text-display-1, .theme-light .text-display-2 { color: var(--text-light-heading); }
+
+/* Nav link */
+.nav-link {
+  font: var(--text-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  opacity: 0.85;
+  transition: opacity var(--duration-fast) var(--ease-out);
+}
+.nav-link:hover { opacity: 1; }
+.theme-dark .nav-link { color: var(--text-dark-primary); }
+.theme-light .nav-link { color: var(--text-light-primary); }
+
+/* Icon button (theme toggle etc) */
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-out), border-color var(--duration-fast) var(--ease-out);
+}
+.theme-dark .icon-btn { color: var(--text-dark-primary); }
+.theme-light .icon-btn { color: var(--text-light-primary); }
+.icon-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Text button ("Download CV") */
+.btn-text {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font: var(--text-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  padding-bottom: 2px;
+  border-bottom: 1px solid currentColor;
+  opacity: 0.9;
+}
+.btn-text:hover { opacity: 1; color: var(--accent); border-color: var(--accent); }
+
+/* Brand lockup */
+.brand {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  text-decoration: none;
+}
+.brand-mark { height: 32px; width: auto; display: block; }
+.brand-name {
+  font: var(--text-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: none;
+}
+.theme-dark .brand-name { color: var(--text-dark-primary); }
+.theme-light .brand-name { color: var(--text-light-primary); }
+
+/* Avatar */
+.avatar {
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  display: block;
+  border: 1px solid var(--border-dark);
+}
+.theme-light .avatar { border-color: var(--border-light); }
+.avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Meta row (Contact / Available / label+value pairs) */
+.meta-row { display: flex; gap: var(--space-7); }
+.meta-item { display: flex; flex-direction: column; gap: var(--space-1); }
+.meta-label { font: var(--text-micro); letter-spacing: var(--tracking-label); text-transform: uppercase; opacity: 0.6; }
+.meta-value { font: var(--text-body-sm); }
+
+/* Project thumbnail (image rail) */
+.project-thumb {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: var(--color-coal-800);
+}
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--duration-slow) var(--ease-out);
+}
+.project-thumb:hover img { transform: scale(1.035); }
+.project-thumb-caption {
+  position: absolute;
+  left: var(--space-4);
+  bottom: var(--space-4);
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  color: var(--color-white);
+  font: var(--text-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity var(--duration-base) var(--ease-out), transform var(--duration-base) var(--ease-out);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
+}
+.project-thumb:hover .project-thumb-caption { opacity: 1; transform: translateY(0); }
+
+/* Index list (right-side project index) */
+.index-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); text-align: right; }
+.index-list-heading { font: var(--text-micro); letter-spacing: var(--tracking-label); text-transform: uppercase; opacity: 0.5; margin-bottom: var(--space-2); }
+.index-list a {
+  font: var(--text-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+.theme-dark .index-list a { color: var(--text-dark-primary); }
+.theme-light .index-list a { color: var(--text-light-primary); }
+.index-list a:hover { color: var(--accent); }
+
+/* Tag / pill */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font: var(--text-micro);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+}
+.tag-accent { color: var(--accent); border-color: var(--accent); background: var(--accent-tint); }
+.theme-dark .tag-neutral { color: var(--text-dark-secondary); border-color: var(--border-dark); }
+.theme-light .tag-neutral { color: var(--text-light-secondary); border-color: var(--border-light); }
+
+/* Divider */
+.divider { border: none; border-top: 1px solid var(--border-dark); margin: 0; }
+.theme-light .divider { border-top-color: var(--border-light); }

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Not found — Devin Griffin</title>
+<link rel="stylesheet" href="css/site.css">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="js/site.js" defer></script>
+</head>
+<body data-theme="dark">
+
+<div class="bg-layer">
+  <video class="bg-img bg-night is-on" autoplay muted loop playsinline preload="auto" poster="assets/bg-night.jpg"><source src="assets/bg-night.mp4" type="video/mp4"></video>
+  <video class="bg-img bg-sunny" autoplay muted loop playsinline preload="auto" poster="assets/bg-sunny.jpg"><source src="assets/bg-sunny.mp4" type="video/mp4"></video>
+</div>
+<div class="sun-flare"></div>
+<canvas class="bg-fx"></canvas>
+<div class="page-veil"></div>
+
+<div class="shell" data-screen-label="404">
+  <header class="nav">
+    <a class="brand" href="index.html">
+      <img data-mark="assets/griffin-mark-THEME" src="assets/griffin-mark-white.svg" alt="Devin Griffin">
+      <span>Devin Griffin</span>
+    </a>
+    <nav class="nav-right">
+      <a class="nav-link" href="work.html">Work</a>
+      <span class="nav-sep">|</span>
+      <a class="nav-link" href="info.html">Info</a>
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle light and dark"><span data-theme-icon></span></button>
+    </nav>
+  </header>
+
+  <main class="pad" style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:24px">
+    <span class="label reveal">404</span>
+    <h1 class="display reveal">Nothing here<br>but stars</h1>
+    <div class="reveal" style="display:flex;gap:24px">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="work.html">Work</a>
+      <a class="nav-link" href="info.html">Info</a>
+    </div>
+  </main>
+
+  <footer class="page-foot">
+    <span></span>
+    <span data-year>© 2026</span>
+  </footer>
+</div>
+
+</body>
+</html>
