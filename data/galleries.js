@@ -5,13 +5,17 @@
    • Remove       → delete the line (or put // in front of it)
    • Add          → copy a line, change the file name and caption
    • Long scroll  → add long: true for full-page screenshots
-                    (they get a fixed-width frame that scrolls on hover)
+                    (they get a fixed-width frame that scrolls on hover;
+                     the scroll speed adjusts to the image, so any length reads
+                     at the same pace — export them 1200px wide)
+
+   Export sizes: normal pieces 1600px on the long edge, WebP ~80.
 
    Images live in assets/work/<project>/web/
    ============================================================ */
 
 /* where the image folders live, relative to the page */
-window.ASSET_BASE = 'assets/';
+window.ASSET_BASE = '../assets/';
 
 window.WORK_GALLERIES = {
 
