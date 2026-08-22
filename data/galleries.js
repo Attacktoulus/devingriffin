@@ -22,28 +22,19 @@ window.WORK_GALLERIES = {
   /* ---------- Homes by Avi ---------- */
   hba: [
     { src: 'CTA-Card-3_CYCLES.webp',             cap: 'Three cycles — website evolution' },
-    { src: '2010-redesign.webp',                 cap: '1st cycle — website evolution (2012)', long: true },
-    { src: '2019-Redesign-Full.webp',            cap: '2nd cycle — website evolution (2018)', long: true },
-    { src: '2022-Redesign.webp',                 cap: '3rd cycle — website evolution (2022, live)', long: true },
-    { src: 'HBA-Autumn-01.webp',                 cap: 'Autumn sub-page (2022, live)', long: true },
     { src: '2022-sites.jpg',                     cap: '2022 platform — responsive system' },
+    { src: '2022-Redesign.webp',                 cap: '3rd cycle — website evolution (2022, live)', long: true },
+    { src: 'HBA-Autumn-01.webp',                 cap: 'Autumn Collateral (2022, live)', long: true },
     { src: 'autumn-landing-desktop.jpg',         cap: 'Autumn campaign — landing page', long: true },
-    { src: 'autumn-landing-mobile.jpg',          cap: 'Autumn campaign — mobile', long: true },
-    { src: '2022-information-architecture.jpg',   cap: 'Information architecture' },
-    { src: 'homepage-desktop-cgy.jpg',           cap: 'Calgary homepage', long: true },
-    { src: '2022-iphone-mockup.jpg',             cap: 'Mobile experience' },
-    { src: 'referral-phone-scroll.jpg',          cap: 'Referral program' },
-    { src: 'billboard-crafting-memories.jpg',    cap: 'Crafting Memories — billboard' },
-    { src: 'busad-crafting-memories.jpg',        cap: 'Crafting Memories — transit' },
-    { src: 'busad-autumn-a.jpg',                 cap: 'Autumn — transit' },
-    { src: 'busad-autumn-c.jpg',                 cap: 'Autumn — transit' },
-    { src: 'magazinead-crafting-memories.jpg',   cap: 'Crafting Memories — magazine' },
-    { src: 'magazinead-01.jpg',                  cap: 'Magazine' },
-    { src: 'digitalad-crafting-memories.jpg',    cap: 'Crafting Memories — digital' },
-    { src: 'onlineads-crafting-memories.jpg',    cap: 'Crafting Memories — online ads' },
+    { src: 'HBA-Referral-01 copy.webp',          cap: 'Referral Program', long: true },
+    { src: 'HBA-CraftingCampaign-01.webp',       cap: 'Crafting Campaign', long: true },
+    { src: '2019-design-overview.jpg',           cap: '2019 cycle — overview' },
+    { src: '2019-Redesign-Full.webp',            cap: '2nd cycle — website evolution (2018)', long: true },
+    { src: '2010-redesign.webp',                 cap: '1st cycle — website evolution (2012)', long: true },
     { src: 'onlineads-grand-opening.jpg',        cap: 'Grand Opening — online ads' },
     { src: 'onlineads-black-friday.jpg',         cap: 'Black Friday — online ads' },
-    { src: '2019-design-overview.jpg',           cap: '2019 cycle — overview' }
+    { src: 'HBA-Posters.webp',                   cap: 'Homes by Avi Posters' }    
+
   ],
 
   /* ---------- CMCA ---------- */
