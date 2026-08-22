@@ -21,14 +21,13 @@ window.WORK_GALLERIES = {
 
   /* ---------- Homes by Avi ---------- */
   hba: [
-    { src: 'CTA-Card-3_CYCLES.webp',             cap: '16 Years / 3 Cycles of Design at HBA' },
+    { src: 'CTA-Card-3_CYCLES.webp',             cap: 'Three cycles — website evolution' },
+    { src: '2022-Redesign.webp',                 cap: '3rd cycle — website evolution (2022, live)', long: true },
     { src: '2022-sites.jpg',                     cap: '2022 platform — responsive system' },
-    { src: '2022-Redesign.webp',                 cap: '2022 3rd Cycle' },
     { src: 'autumn-landing-desktop.jpg',         cap: 'Autumn campaign — landing page', long: true },
-    { src: 'HBA-Autumn-01.webp',                 cap: 'Autumn campaign — All mediums', long: true },
-    { src: '2019-design-overview.jpg',           cap: '2019 cycle — overview' }    
-    { src: '2019-Redesign-Full.webp',            cap: '2022 2nd Cycle' },
-    { src: '2010-redesign.webp',                 cap: '2022 1st Cycle', long: true },
+    { src: 'HBA-Autumn-01.webp',                 cap: 'Autumn sub-page (2022, live)', long: true },
+    { src: '2010-redesign.webp',                 cap: '1st cycle — website evolution (2012)', long: true },   
+    { src: '2019-Redesign-Full.webp',            cap: '2nd cycle — website evolution (2018)', long: true },   
     { src: 'billboard-crafting-memories.jpg',    cap: 'Crafting Memories — billboard' },
     { src: 'busad-crafting-memories.jpg',        cap: 'Crafting Memories — transit' },
     { src: 'magazinead-crafting-memories.jpg',   cap: 'Crafting Memories — magazine' },
@@ -37,6 +36,7 @@ window.WORK_GALLERIES = {
     { src: 'onlineads-crafting-memories.jpg',    cap: 'Crafting Memories — online ads' },
     { src: 'onlineads-grand-opening.jpg',        cap: 'Grand Opening — online ads' },
     { src: 'onlineads-black-friday.jpg',         cap: 'Black Friday — online ads' },
+    { src: '2019-design-overview.jpg',           cap: '2019 cycle — overview' }
   ],
 
   /* ---------- CMCA ---------- */
