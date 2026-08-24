@@ -26,7 +26,7 @@ window.WORK_GALLERIES = {
     { src: '2022-Redesign.webp',                 cap: '3rd cycle — website evolution (2022, live)', long: true },
     { src: 'HBA-Autumn-01.webp',                 cap: 'Autumn Collateral (2022, live)', long: true },
     { src: 'autumn-landing-desktop.jpg',         cap: 'Autumn campaign — landing page', long: true },
-    { src: 'HBA-Referral-01 copy.webp',          cap: 'Referral Program', long: true },
+    { src: 'HBA-Referral-01.webp',               cap: 'Referral Program', long: true },
     { src: 'HBA-CraftingCampaign-01.webp',       cap: 'Crafting Campaign', long: true },
     { src: '2019-design-overview.jpg',           cap: '2019 cycle — overview' },
     { src: '2019-Redesign-Full.webp',            cap: '2nd cycle — website evolution (2018)', long: true },
