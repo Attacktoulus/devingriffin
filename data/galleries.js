@@ -28,6 +28,7 @@ window.WORK_GALLERIES = {
     { src: 'autumn-landing-desktop.jpg',         cap: 'Autumn campaign — landing page', long: true },
     { src: 'HBA-Referral-01.webp',               cap: 'Referral Program', long: true },
     { src: 'HBA-CraftingCampaign-01.webp',       cap: 'Crafting Campaign', long: true },
+    { src: 'HBA-LegoCampaign-01.webp',           cap: 'Precision Campaign', long: true },    
     { src: '2019-design-overview.jpg',           cap: '2019 cycle — overview' },
     { src: '2019-Redesign-Full.webp',            cap: '2nd cycle — website evolution (2018)', long: true },
     { src: '2010-redesign.webp',                 cap: '1st cycle — website evolution (2012)', long: true },
