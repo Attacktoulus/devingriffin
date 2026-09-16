@@ -52,15 +52,11 @@ window.WORK_GALLERIES = {
 
   /* ---------- Archive (folder: current) ---------- */
   archive: [
-    { src: 'benevity-home.jpg',            cap: 'Benevity — homepage' },
-    { src: 'benevity-sub.jpg',             cap: 'Benevity — subpage' },
-    { src: 'benevity-corporate-home.jpg',  cap: 'Benevity — corporate' },
-    { src: 'benevity-corporate-sub.jpg',   cap: 'Benevity — corporate subpage' },
-    { src: 'kilo9-website-homepage.jpg',   cap: 'Kilo9 Pet Resort — website', long: true },
-    { src: 'kilo9-logo-dark.jpg',          cap: 'Kilo9 — identity' },    
-    { src: 'cl-businesscard-front.jpg',    cap: 'Business card — front' },
-    { src: 'cl-businesscard-back.jpg',     cap: 'Business card — back' },
-    { src: 'chmic-website-home.jpg',       cap: 'CHMIC — website' },
+    { src: 'benevity-layout.webp',   cap: 'Benevity — brand identity and website', long: true },
+    { src: 'claraluna-layout.webp',  cap: 'Claraluna Massage & Wellness — identity and collateral' },
+    { src: 'axiom-layout.webp',      cap: 'Axiom — brand and product platform', long: true },
+    { src: 'kilo9-layout.webp',      cap: 'Kilo-9 Pet Resort — identity, website and print', long: true },
+    { src: 'calvert-layout.webp',    cap: 'Calvert Home Mortgage — brand, collateral and website', long: true },
   ]
 };
 
