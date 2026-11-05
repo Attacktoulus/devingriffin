@@ -2,55 +2,112 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Not found — Devin Griffin</title>
-<link rel="stylesheet" href="css/site.css">
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-<script src="js/site.js" defer></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page not found | Devin Griffin</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/griffin-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;900&amp;display=swap">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/work.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
-<body data-theme="dark">
+<body class="cs-body theme-night info-body privacy-body">
 
-<div class="bg-layer">
-  <video class="bg-img bg-night is-on" autoplay muted loop playsinline preload="auto" poster="assets/bg-night.jpg"><source src="assets/bg-night.mp4" type="video/mp4"></video>
-  <video class="bg-img bg-sunny" autoplay muted loop playsinline preload="auto" poster="assets/bg-sunny.jpg"><source src="assets/bg-sunny.mp4" type="video/mp4"></video>
+<div class="night-bg" aria-hidden="true">
+  <picture><source media="(max-width: 860px)" srcset="/assets/night-mobile.webp"><img src="/assets/night-desktop.webp" alt="" width="2400" height="1443"></picture>
 </div>
-<div class="sun-flare"></div>
-<canvas class="bg-fx"></canvas>
-<div class="page-veil"></div>
 
-<div class="shell" data-screen-label="404">
-  <header class="nav">
-    <a class="brand" href="index.html">
-      <img data-mark="assets/griffin-mark-THEME" src="assets/griffin-mark-white.svg" alt="Devin Griffin">
-      <span>Devin Griffin</span>
-    </a>
-    <nav class="nav-right">
-      <a class="nav-link" href="work.html">Work</a>
-      <span class="nav-sep">|</span>
-      <a class="nav-link" href="assets/Devin-Griffin-CV.pdf" download>CV</a>
-      <span class="nav-sep">|</span>
-      <a class="nav-link" href="info.html">Info</a>
-      <span class="nav-sep">|</span>
-      <a class="nav-link" href="mailto:devingriffin75@gmail.com">Contact</a>
-      <button class="icon-btn" data-theme-toggle aria-label="Toggle light and dark"><span data-theme-icon></span></button>
+<div class="page cs-page">
+  <header class="cs-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__logo fx" href="/" aria-label="Devin Griffin, home" data-reveal><img src="/assets/griffin-mark.svg" alt="" width="47" height="40"></a>
+      <div class="nav__links">
+        <button class="fx nav__toggle" type="button" aria-expanded="false" aria-controls="work-menu" data-reveal>Work<span class="nav__caret" aria-hidden="true"></span></button>
+        <a class="fx" href="/assets/Devin-Griffin-CV.pdf" download data-reveal>CV</a>
+        <a class="fx" href="/info/" data-reveal>Info</a>
+        <a class="fx" href="#contact" data-reveal>Contact</a>
+      </div>
+      <div class="workmenu" id="work-menu" hidden>
+        <p class="wm__head">Selected work</p>
+        <ol class="wm__list">
+          <li><a class="wm__row fx" href="/work/homes-by-avi/"><span class="wm__no">01</span><span class="wm__text"><span class="wm__name">Homes by Avi</span><span class="wm__sub">Web · Campaign · Print</span></span><span class="wm__dot" aria-hidden="true"></span></a></li>
+          <li><a class="wm__row fx" href="/work/cmca/"><span class="wm__no">02</span><span class="wm__text"><span class="wm__name">CMCA</span><span class="wm__sub">Identity · Web · Social</span></span><span class="wm__dot" aria-hidden="true"></span></a></li>
+          <li><a class="wm__row fx" href="/work/recent/"><span class="wm__no">03</span><span class="wm__text"><span class="wm__name">Recent Work</span><span class="wm__sub">Freelance identity &amp; web</span></span><span class="wm__dot" aria-hidden="true"></span></a></li>
+        </ol>
+      </div>
+      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu" id="menu-open">
+        <span data-reveal></span><span data-reveal></span><span data-reveal></span>
+      </button>
     </nav>
   </header>
 
-  <main class="pad" style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:24px">
-    <span class="label reveal">404</span>
-    <h1 class="display reveal">Nothing here<br>but stars</h1>
-    <div class="reveal" style="display:flex;gap:24px">
-      <a class="nav-link" href="index.html">Home</a>
-      <a class="nav-link" href="work.html">Work</a>
-      <a class="nav-link" href="info.html">Info</a>
+  <main class="cs privacy">
+    <div class="privacy__intro">
+      <h1 class="cs__title" data-reveal>404</h1>
+      <p class="privacy__updated" data-reveal>Page not found</p>
     </div>
+    <article class="privacy__body">
+      <p class="privacy__lead" data-reveal>That page has moved or never existed. The site was rebuilt in 2026, so older links may point somewhere new.</p>
+      <h2 data-reveal>Try one of these</h2>
+      <p data-reveal><a href="/">Home</a> · <a href="/work/homes-by-avi/">Homes by Avi</a> · <a href="/work/cmca/">CMCA</a> · <a href="/work/recent/">Recent Work</a> · <a href="/info/">Info</a></p>
+    </article>
   </main>
 
-  <footer class="page-foot">
-    <span></span>
-    <span data-year>© 2026</span>
+
+  <footer class="footer cs-footer" id="contact">
+    <div class="wrap">
+      <div class="footer__rule" aria-hidden="true"></div>
+      <div class="footer__grid">
+        <div class="contact" data-reveal>
+          <h2>Contact</h2>
+          <div class="contact__lines">
+            <a href="mailto:devingriffin75@gmail.com">devingriffin75@gmail.com</a>
+            <a href="https://www.linkedin.com/in/devin-griffin-28359412/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="contact__legal">
+            <a href="/privacy/">Privacy Policy</a>
+            <span>© 2026</span>
+          </div>
+        </div>
+        <form class="form" id="contact-form" action="https://formspree.io/f/xqppngon" method="POST" data-endpoint="https://formspree.io/f/xqppngon" novalidate>
+          <h2 data-reveal>Get a hold of me</h2>
+          <div class="form__row" data-reveal>
+            <div class="field"><label for="cf-name">Name</label><input id="cf-name" name="name" type="text" placeholder="Your name" autocomplete="name" required></div>
+            <div class="field"><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" placeholder="Your email" autocomplete="email" required></div>
+          </div>
+          <div class="field field--full" data-reveal><label for="cf-subject">Subject</label><input id="cf-subject" name="subject" type="text" placeholder="Subject"></div>
+          <div class="field field--full" data-reveal><label for="cf-question">Question</label><textarea id="cf-question" name="question" placeholder="Ask me anything" rows="1" required></textarea></div>
+          <button class="submit fx" type="submit" data-reveal>Submit</button>
+          <p class="form__status" id="cf-status" role="status"></p>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+        </form>
+        <div class="legal-m"><a href="/privacy/">Privacy Policy</a><span>© 2026</span></div>
+      </div>
+    </div>
+    <div class="giant" aria-hidden="true">
+      <div class="giant__track"><span>Creativity Commands the Market.</span><span>Creativity Commands the Market.</span></div>
+    </div>
   </footer>
+
+  <div class="menu" id="menu" hidden>
+    <button class="menu__close" type="button" id="menu-close" aria-label="Close menu">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 3l20 20M23 3L3 23"/></svg>
+    </button>
+    <a href="/">Home</a>
+    <button class="menu__toggle" type="button" aria-expanded="false" aria-controls="menu-work">Work<span class="menu__pm" aria-hidden="true"></span></button>
+    <ul class="menu__sub" id="menu-work" hidden>
+      <li><a href="/work/homes-by-avi/"><span class="menu__no">01</span>Homes by Avi</a></li>
+      <li><a href="/work/cmca/"><span class="menu__no">02</span>CMCA</a></li>
+      <li><a href="/work/recent/"><span class="menu__no">03</span>Recent Work</a></li>
+    </ul>
+    <a href="/assets/Devin-Griffin-CV.pdf" download>CV</a>
+    <a href="/info/">Info</a>
+    <a href="#contact" data-close>Contact</a>
+  </div>
 </div>
 
+<script src="/main.js" defer></script>
 </body>
 </html>
