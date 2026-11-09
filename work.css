@@ -41,9 +41,9 @@
 
 /* ---------- 20% architectural detail ---------- */
 .cs-page { isolation: auto; }   /* let the detail graphic blend with the fixed shader below */
-.cs-detail { position: absolute; z-index: -1; top: 0; left: 50%; width: 1440px; max-width: none; transform: translateX(-50%); opacity: .14; mix-blend-mode: multiply; pointer-events: none; }
+.cs-detail { position: absolute; z-index: -1; top: 0; left: 50%; width: max(100%, 1440px); max-width: none; transform: translateX(-50%); opacity: .14; mix-blend-mode: multiply; pointer-events: none; }
 /* mint linework turned dark, then multiplied: it etches the shader slightly darker instead of lightening it */
-.cs-detail img { width: 1440px; max-width: none; height: auto; filter: brightness(0); }
+.cs-detail img { width: 100%; max-width: none; height: auto; filter: brightness(0); }   /* full bleed, never narrower than the 1440 comp */
 
 /* ---------- layout ---------- */
 .cs-header { position: relative; height: 0; }
