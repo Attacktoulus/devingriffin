@@ -106,19 +106,17 @@ h1, h2 { text-wrap: balance; }
    HERO
    ===================================================== */
 .hero { position: relative; background: #000; }
-.hero__media { position: relative; height: clamp(420px, 50.2vw, 723px); overflow: hidden; }
-.hero__video, .hero__still img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+/* the box matches the film (16:9 desktop, 9:16 phone) so no part of the frame is ever cropped;
+   the film's own black fade sits at the bottom, so on short windows only black falls below the fold */
+.hero__media { position: relative; width: 100%; aspect-ratio: 16 / 9; height: auto; overflow: hidden; background: #000; }
+.hero__video, .hero__still img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
 .hero__video { position: absolute; inset: 0; z-index: 1; background: #000; }
 .hero__still { display: block; height: 100%; }
 /* the still (last frame) only shows when the film is not playing: reduced motion, no JS, or playback blocked */
 .js .hero__still { visibility: hidden; }
 .js .hero__media.is-still .hero__still { visibility: visible; }
 .hero__media.is-still .hero__video, html:not(.js) .hero__video { display: none; }
-.hero__media::after { z-index: 2; }
-.hero__media::after {
-  content: ""; position: absolute; inset: auto 0 0 0; height: 182px;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000 100%);
-}
+/* no CSS fade: the film fades itself to black at the bottom, and a gradient here would cover the type */
 
 .nav { position: absolute; z-index: 5; top: 53px; left: max(52px, env(safe-area-inset-left, 0px)); display: flex; }
 .nav__logo {
@@ -466,9 +464,7 @@ h1, h2 { text-wrap: balance; }
   .burger span { display: block; height: 5px; background: var(--green-light); transition: background-color 90ms linear; }
   .burger:hover span, .burger:focus-visible span { background: var(--orange); }
 
-  .hero__media { height: 660px; }
-  .hero__video, .hero__still img { object-position: 50% 45%; }
-  .hero__media::after { height: 186px; }
+  .hero__media { aspect-ratio: 9 / 16; }
   .hero__band { padding-block: 8px 56px; }
   .chips { flex-wrap: nowrap; gap: 4px; }
   .chip { flex: 1 1 0; min-width: 0; padding: 0 10px; font-size: 12px; font-weight: 600; }
