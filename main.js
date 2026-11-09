@@ -88,7 +88,7 @@
       if ((p.length > 1 && here.indexOf(p) !== -1) || (file && location.pathname.split('/').pop() === file)) a.setAttribute('aria-current', 'page');
     });
     var openWm = function () { clearTimeout(wmTimer); wm.hidden = false; wmBtn.setAttribute('aria-expanded', 'true'); };
-    var closeWm = function (focusBtn) { clearTimeout(wmTimer); wm.hidden = true; wmBtn.setAttribute('aria-expanded', 'false'); if (focusBtn) wmBtn.focus(); };
+    var closeWm = function (focusBtn) { clearTimeout(wmTimer); wm.hidden = true; wm.classList.remove('is-flagged'); wmBtn.setAttribute('aria-expanded', 'false'); if (focusBtn) wmBtn.focus(); };
     wmBtn.addEventListener('click', function () { wm.hidden ? openWm() : closeWm(); });
     if (hoverable) {
       [wmBtn, wm].forEach(function (el) {
@@ -114,6 +114,7 @@
   if (mToggle && mSub) {
     mToggle.addEventListener('click', function () {
       var open = mSub.hidden; mSub.hidden = !open; mToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (!open && menu) menu.classList.remove('is-flagged');
     });
   }
 
@@ -129,6 +130,7 @@
   };
   var closeMenu = function () {
     menu.hidden = true;
+    menu.classList.remove('is-flagged');
     openBtn.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
     openBtn.focus();
@@ -139,6 +141,34 @@
     menu.addEventListener('click', function (e) { if (e.target.closest('a')) closeMenu(); });
     menu.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
   }
+
+  /* ---- "See my work": jump to the nav with the Work menu open and "Selected work" flagged ----
+     Only these links (and arriving at /#selected-work) flag the title; opening Work by hand does not. */
+  var flagWork = function (byKeyboard) {
+    var phone = window.matchMedia('(max-width: 860px)').matches;
+    if (phone && menu && openBtn && mSub && mToggle) {
+      openMenu();
+      mSub.hidden = false; mToggle.setAttribute('aria-expanded', 'true');
+      menu.classList.add('is-flagged');
+      if (byKeyboard) mSub.querySelector('a').focus();
+      return;
+    }
+    if (!wm || !wmBtn) return;
+    var show = function () {
+      wm.hidden = false; wmBtn.setAttribute('aria-expanded', 'true');
+      wm.classList.remove('is-flagged'); void wm.offsetWidth;          // restart the underline wipe
+      wm.classList.add('is-flagged');
+      if (byKeyboard) wm.querySelector('a').focus({ preventScroll: true });
+    };
+    if (window.scrollY < 2) { setTimeout(show, 0); return; }
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    var t0 = Date.now();
+    (function wait() { if (window.scrollY < 2 || Date.now() - t0 > 1600) show(); else requestAnimationFrame(wait); })();
+  };
+  Array.prototype.forEach.call(document.querySelectorAll('a[href="/#selected-work"], a[href="#selected-work"]'), function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); flagWork(e.detail === 0); });
+  });
+  if (location.hash === '#selected-work') flagWork(false);
 
   /* ---- Feature images behind the four underlined words ----
      Each word opens its image full screen. Files live in assets/words/:

@@ -155,7 +155,15 @@ h1, h2 { text-wrap: balance; }
 @keyframes wm-in { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
 /* hover bridge so the pointer can travel from the pill to the panel */
 .workmenu::before { content: ""; position: absolute; left: 0; right: 0; top: -9px; height: 9px; }
-.wm__head { padding: 0 0 10px; font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--green-light, #8ccb8d); }
+.wm__head { width: fit-content; padding: 0 0 8px; margin-bottom: 4px; font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--green-light, #8ccb8d); }
+/* flagged only when arriving from a "See my work" link: bright green underline wipes in with the site's stepped cover-up */
+.workmenu.is-flagged .wm__head, .menu.is-flagged .menu__toggle {
+  background: linear-gradient(var(--green), var(--green)) left bottom / 100% 3px no-repeat;
+  animation: flag-wipe 420ms linear 160ms both;
+}
+.workmenu.is-flagged .wm__head { color: #fff; }
+@keyframes flag-wipe { 0%, 22% { background-size: 0% 3px; } 23%, 46% { background-size: 20% 3px; } 47%, 72% { background-size: 50% 3px; } 73%, 100% { background-size: 100% 3px; } }
+@media (prefers-reduced-motion: reduce) { .workmenu.is-flagged .wm__head, .menu.is-flagged .menu__toggle { animation: none; } }
 .wm__list { list-style: none; margin: 0; padding: 0; }
 .wm__row {
   display: flex; align-items: center; min-height: 64px; padding: 10px 0;
