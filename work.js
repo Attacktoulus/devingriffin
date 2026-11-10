@@ -32,10 +32,11 @@
     index = (i + items.length) % items.length;
     var it = items[index];
     box.classList.toggle('is-tall', !!it.tall);
+    box.classList.toggle('is-small', !!it.small);
     img.classList.remove('is-in');
     img.removeAttribute('srcset');
     img.width = it.w; img.height = it.h;
-    img.sizes = it.tall ? '(max-width: 860px) 100vw, 1100px' : '(max-width: 860px) 100vw, 80vw';
+    img.sizes = it.small ? '(max-width: 860px) 50vw, 80vw' : it.tall ? '(max-width: 860px) 100vw, 1100px' : '(max-width: 860px) 100vw, 80vw';
     img.srcset = url(slug, it.sm) + ' ' + Math.min(it.w, it.tall ? 780 : 1100) + 'w, ' + url(slug, it.src) + ' ' + it.w + 'w';
     img.src = url(slug, it.src);
     img.alt = it.alt;

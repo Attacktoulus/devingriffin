@@ -489,7 +489,9 @@ h1, h2 { text-wrap: balance; }
   .portrait { width: 112px; height: 112px; }
   .about__side > .textlink { display: none; }
   .about__exp { display: flex; flex-direction: column; gap: 5px; width: 174px; }
+  .about__num { display: flex; align-items: center; gap: 10px; }
   .about__exp .big { font-family: var(--f-serif); font-size: 44px; line-height: .9; color: var(--green-dark); }
+  .about__exp .yrs { font-size: 15px; font-weight: 600; line-height: 1.05; color: var(--green-deep); }
   .about__exp .cap { font-size: 11px; line-height: 1.35; text-transform: uppercase; color: var(--muted); letter-spacing: .02em; }
   .about__bio { grid-template-columns: 30px minmax(0, 1fr); border-top: 0; padding-top: 0; margin-right: 0; }
   .about__bio .arrow { align-self: start; font-size: 14px; color: var(--muted); }
